@@ -1,0 +1,47 @@
+  <nav class="navbar is-white has-shadow">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/demo">
+        <img src="<?action('logo')?>&79:1=" style="max-height: 70px" class="py-2 px-2">
+      </a>
+       <a class="navbar-burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+  
+    <div class="navbar-menu" id="nav-links">
+      <!-- right links -->
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Integration<br/>Examples
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="<?action('datatable')?>">DataTable</a>
+          <a class="navbar-item" href="<?action('canvasJS')?>">canvasJS</a>
+          <a class="navbar-item" href="<?action('ITEM.LIST')?>">Item list with search</a>
+        </div>
+      </div>
+    </div>
+      <div class="navbar-end">
+        <?profile('VENDOR')?>
+            <a href="<?action('VENDOR.BANK.ACCOUNT.LIST')?>" class="navbar-item">My Bank Accounts</a>
+            <a href="<?action('PURCHASE.ORDERS')?>" class="navbar-item">Open Orders</a>
+            <a href="<?action('statement2')?>" class="navbar-item">My Account</a>
+        <?endif?>
+        <?profile('CUSTOMER')?>
+            <a href="<?action('salesquote.new')?>" class="navbar-item">Request Quote</a>
+            <a href="<?action('salesquotes')?>" class="navbar-item">Sales Quotes</a>
+            <a href="<?action('salesorders')?>" class="navbar-item">Sales Orders</a>
+            <a href="<?action('projects')?>" class="navbar-item">Projects</a>
+            <a href="<?action('statement')?>" class="navbar-item">My Account</a>
+        <?endif?>
+        <?open("APD Auth0 Setup Hgd")?>
+        <?if("APD Auth0 Setup Hgd","Auth0 Domain",'<>','')?>
+            <a href="<?auth0logoutlink?>" class="navbar-item">Logout</a>
+        <?else?>
+            <a href="<?action('login-basic')?>" class="navbar-item">Logout</a>
+        <?endif?>
+      </div>
+    </div>
+  </nav>

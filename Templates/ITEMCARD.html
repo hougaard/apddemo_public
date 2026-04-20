@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <?parse('header.html')?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css">
+</head>
+<body>
+    <?open("Item")?>
+    <?filter("Item","No.",parm('27:1'))?>
+    <?loop("Item",'-')?>
+    <?loopend("Item",1,1)?>
+    <?parse('navbar.html')?>
+    <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li class="is-active"><a href="#"><?field(Item,Description)?></a></li>
+      </ul>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <div class="columns">
+                    <div class="column is-one-quarter">
+                        <figure class="image is-4by3">
+                            <img src="<?action('itempicture',27)?>" style="width: 300px;" alt="Product Image">
+                        </figure>
+                        <?if(Item,"Assembly BOM",'=','true')?>
+                            <a href="<?action('bom',Item)?>" class="button is-success">See Bill of Material</a>
+                        <?endif?>
+                    </div>
+                    <div class="column">
+                        <table class="table is-fullwidth">
+                            <tbody>
+                                <tr>
+                                    <th colspan="2" class="title is-info"><?field("Item","No.")?> <?field("Item",Description)?></th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" class="has-background-success-light">
+                                        <?open("Entity Text")?>
+                                        <?filter("Entity Text","Source Table Id",27)?>
+                                        <?filter("Entity Text","Source System Id",field(Item,"$SystemId"))?>
+                                        <?loop("Entity Text",'-')?>
+                                            <?raw("Entity Text",Text)?>
+                                        <?loopend("Entity Text",1,1)?>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>Base Unit of Measure</th>
+                                    <td class="has-text-right"><?field("Item","Base Unit of Measure")?></td>
+                                </tr>
+                                <tr>
+                                    <th>Type</th>
+                                    <td class="has-text-right"><?field("Item","Type")?></td>
+                                </tr>
+                                <tr>
+                                    <th>Unit Price</th>
+                                    <td class="has-text-right"><?field("Item","Unit Price")?></td>
+                                </tr>
+                                <tr>
+                                    <th>Vendor Item No.</th>
+                                    <td><?field("Item","Vendor Item No.")?></td>
+                                </tr>
+                                <tr>
+                                    <th>Lead Time Calculation</th>
+                                    <td><?field("Item","Lead Time Calculation")?></td>
+                                </tr>
+                                <tr>
+                                    <th>Inventory</th>
+                                    <td class="has-text-right"><?field("Item","Inventory")?></td>
+                                </tr>
+                                <tr>
+                                    <th>Purchases (Qty.)</th>
+                                    <td class="has-text-right"><?field("Item","Purchases (Qty.)")?></td>
+                                </tr>
+                                <tr>
+                                    <th>Sales (Qty.)</th>
+                                    <td class="has-text-right"><?field("Item","Sales (Qty.)")?></td>
+                                </tr>
+                                <tr>
+                                    <th>Purchases (LCY)</th>
+                                    <td class="has-text-right"><?field("Item","Purchases (LCY)")?></td>
+                                </tr>
+                                <tr>
+                                    <th>Sales (LCY)</th>
+                                    <td class="has-text-right"><?field("Item","Sales (LCY)")?></td>
+                                </tr>
+                                <tr>
+                                    <th>Qty. on Purch. Order</th>
+                                    <td class="has-text-right"><?field("Item","Qty. on Purch. Order")?></td>
+                                </tr>
+                                <tr>
+                                    <th>Qty. on Sales Order</th>
+                                    <td class="has-text-right"><?field("Item","Qty. on Sales Order")?></td>
+                                </tr>
+                                <?close("Item")?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?parse('footer.html')?>
+</body>
+</html>

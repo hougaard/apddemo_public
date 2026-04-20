@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <?parse('header.html')?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css">
+</head>
+<body>
+    <?parse('navbar.html')?>
+    <?open("Sales Header")?>
+    <?filter("Sales Header","Document Type",1)?>
+    <?filter("Sales Header","No.",parm('36:3'))?>
+    <?loop("Sales Header",'-')?><?loopend("Sales Header",1,1)?>
+    <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="<?action('salesorders')?>">Sales Orders</a></li>
+        <li><a href="<?action('salesorder',"Sales Header")?>"><?field("Sales Header","No.")?></a></li>
+        <li class="is-active"><a href="#">Edit</a></li>
+      </ul>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <div class="card">
+               <div class="card-content">
+                    <div class="content">
+                        <form id="headerform">
+                          <?hidden("Sales Header","No.")?>
+                          <?hidden("Sales Header","Document Type")?>
+                          <table class="table is-fullwidth">
+                            <tbody>
+                                <tr>
+                                    <td class="title is-info" colspan="2">Sales Order <?field("Sales Header", "No.")?></td>
+                                </tr>
+                                <tr>
+                                    <td>Ship-to Name</td>
+                                    <td>
+                                        <?field("Sales Header", "Ship-to Name")?><br/>
+                                        <?field("Sales Header", "Ship-to Address")?><br/>
+                                        <?field("Sales Header", "Ship-to City")?> <?field("Sales Header", "Ship-to Post Code")?> <?field("Sales Header", "Ship-to County")?><br/>
+                                        <?field("Sales Header", "Ship-to Country/Region Code")?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Your Reference</td>
+                                    <td><?edit("Sales Header", "Your Reference",'class="field input has-text-left"')?></td>
+                                </tr>
+                                <tr>
+                                    <td>Order Date</td>
+                                    <td><?show("Sales Header", "Order Date",'class="field input has-text-right"')?></td>
+                                </tr>
+                                <tr>
+                                    <td>Posting Date</td>
+                                    <td><?show("Sales Header", "Posting Date",'class="field input has-text-right"')?></td>
+                                </tr>
+                                <tr>
+                                    <td>Shipment Date</td>
+                                    <td><?edit("Sales Header", "Shipment Date",'class="field input has-text-right"')?></td>
+                                </tr>
+                                <tr>
+                                    <td>Due Date</td>
+                                    <td><?show("Sales Header", "Due Date",'class="field input has-text-right"')?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </form>
+                        <?open("Sales Line")?>
+                        <?filter("Sales Line","Document No.",field(36,3))?>
+                        <table class="table is-striped is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>No.</th>
+                                    <th>Description</th>
+                                    <th class="has-text-right">Quantity</th>
+                                    <th class="has-text-right">Unit Price</th>
+                                    <th class="has-text-right">Line Discount %</th>
+                                    <th class="has-text-right">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?loop("Sales Line",'-')?>
+                                <form>
+                                    <tr>
+                                        <td>
+                                            <?hidden("Sales Line","Document Type")?>
+                                            <?hidden("Sales Line","Document No.")?>
+                                            <?hidden("Sales Line","Line No.")?>
+                                            <?field("Sales Line","Type")?>
+                                        </td>
+                                        <td><?field("Sales Line","No.")?></td>
+                                        <td><?field("Sales Line","Description")?></td>
+                                        <td class="has-text-right"><?edit("Sales Line","Quantity",'class="field input has-text-right"')?></td>
+                                        <td class="has-text-right"><?show("Sales Line","Unit Price",'class="field input has-text-right"')?></td>
+                                        <td class="has-text-right"><?show("Sales Line","Line Discount %",'class="field input has-text-right"')?></td>
+                                        <td class="has-text-right"><?show("Sales Line","Amount",'class="field input has-text-right"')?></td>
+                                    </tr>
+                                </form>
+                                <?loopend("Sales Line",1,20)?>
+                            </tbody>
+                        </table>
+                        <?close("Sales Line")?>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                         <form id="headertotal">
+                          <?hidden("Sales Header","No.")?>
+                          <?hidden("Sales Header","Document Type")?>
+                             <table class="table is-fullwidth">
+                                <tbody>
+                                    <tr>
+                                        <td>Amount</td>
+                                        <td class="has-text-right"><?show("Sales Header", "Amount")?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Amount Including VAT</td>
+                                        <td class="has-text-right"><?show("Sales Header", "Amount Including VAT")?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </form>
+                        <?close("Sales Header")?>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script>
+        function Extra(triggerform)
+        {
+            if (triggerform != document.getElementById("headerform"))
+                APD_Refresh(36,document.getElementById("headerform"));
+            if (triggerform != document.getElementById("headertotal"))
+                APD_Refresh(36,document.getElementById("headertotal"));
+        }
+        ExtraValidateFunction = Extra;
+    </script>
+    </section>
+    <?parse('footer.html')?>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html lang="en" data-theme="light">
+<head>
+  <?parse('header.html')?>
+  <title>hougaard.com - Partner Portal - Payment</title>
+  <script src="https://js.stripe.com/basil/stripe.js"></script>
+</head>
+<body>
+    <?parse('navbar.html')?>
+    <?open("Cust. Ledger Entry")?>
+    <?filter("cust. ledger entry","Document No.",parm('invoice'))?>
+    
+    <div class="columns mt-4">
+        <div class="column is-one-fifth"></div>
+        <div class="column is-three-fifth">
+            <h1 class="title">Pay Invoice with credit card: <?field("cust. ledger entry","Document No.")?></h1>
+            <p class="is-size-6">Use this button to pay invoice <?field("cust. ledger entry","Document No.")?> with a credit card. You'll be taken to a payment page.</p>
+            <h1 class="is-size-4">Total <?field("cust. ledger entry","Currency Code")?> <?field("Cust. ledger entry",Amount)?></h1>
+            <a href="<?stripelink(field(21,11),field(21,14),field(21,6),'PAY-INVOICE-COMPLETE')?>" class="button is-success mt-3">Pay Invoice</a>
+       </div>
+      <div class="column is-one-fifth"></div>
+    </div>
+    <?parse('footer.html')?>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <?parse('header.html')?>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
+  <title>Advanced Portal Designer - DataTables Example</title>
+</head>
+<body>
+    <?parse('navbar.html')?>
+     <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li class="is-active"><a href="#">Item List</a></li>
+      </ul>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Item List</h1>
+            <form method="GET" action="/demo/item.list">
+                <label for="search" class="pr-2">
+                    <button type="submit">   
+                    	<p class="has-text-black" style="font-size: 25px;">&#x1F50E;&#xFE0E;</p>
+                    </button>
+                </label>
+                <input class="is-size-6 pl-2 mb-2" type="text" id="search" name="search" placeholder="Search" value="<?parm('search')?>">
+            </form>
+            <?open(Item)?>
+            <?if(0,parm('search'),'<>','')?>
+                <?filter(Item,Description,'@*' .. parm('search') .. '*')?>
+            <?endif?>
+            <table class="table is-striped is-bordered">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th class="has-text-right">Unit Price</th>
+                        <th class="has-text-right">Inventory</th>
+                        <th class="has-text-right">Purchases (Qty.)</th>
+                        <th class="has-text-right">Sales (Qty.)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?loop(Item, '-')?>
+                    <tr>
+                        <td><?field(Item, "No.")?></td>
+                        <td><?field(Item, Description)?></td>
+                        <td><?field(Item, Type)?></td>
+                        <td class="has-text-right"><?field(Item, "Unit Price")?></td>
+                        <td class="has-text-right"><?field(Item, Inventory)?></td>
+                        <td class="has-text-right"><?field(Item, "Purchases (Qty.)")?></td>
+                        <td class="has-text-right"><?field(Item, "Sales (Qty.)")?></td>
+                    </tr>
+                    <?loopend(Item, 1, 20)?>
+                </tbody>
+            </table>
+            <div class="is-justify-content-right">
+                <p class="level-item is-justify-content-left"><a class="button level-item mr-3" href="<?prev(Item,1)?>">Previous</a>
+                Page <?pageno(Item,20,1)?> of <?pages(Item,20,1)?>
+                <a class="ml-3 button level-item" href="<?next(Item,1)?>">Next</a></p>
+            </div>
+            <?close(Item)?>
+        </div>
+    </section>
+    <?parse('footer.html')?>
+</body>
+</html>

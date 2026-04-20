@@ -1,0 +1,1466 @@
+{
+  "Table": "APD Action DataItem Col. 2 Hgd",
+  "No": 70310520,
+  "Records": [
+    {
+      "F1": {
+        "value": "CUSTOMERDATA"
+      },
+      "F2": {
+        "value": "customer"
+      },
+      "F4": {
+        "value": 18
+      },
+      "F5": {
+        "value": 1
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMERDATA"
+      },
+      "F2": {
+        "value": "customer"
+      },
+      "F4": {
+        "value": 18
+      },
+      "F5": {
+        "value": 2
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMERDATA"
+      },
+      "F2": {
+        "value": "customer"
+      },
+      "F4": {
+        "value": 18
+      },
+      "F5": {
+        "value": 4
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMERDATA"
+      },
+      "F2": {
+        "value": "customer"
+      },
+      "F4": {
+        "value": 18
+      },
+      "F5": {
+        "value": 5
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMERDATA"
+      },
+      "F2": {
+        "value": "customer"
+      },
+      "F4": {
+        "value": 18
+      },
+      "F5": {
+        "value": 7
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMERDATA"
+      },
+      "F2": {
+        "value": "entries"
+      },
+      "F4": {
+        "value": 21
+      },
+      "F5": {
+        "value": 4
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMERDATA"
+      },
+      "F2": {
+        "value": "entries"
+      },
+      "F4": {
+        "value": 21
+      },
+      "F5": {
+        "value": 5
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMERDATA"
+      },
+      "F2": {
+        "value": "entries"
+      },
+      "F4": {
+        "value": 21
+      },
+      "F5": {
+        "value": 6
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMERDATA"
+      },
+      "F2": {
+        "value": "entries"
+      },
+      "F4": {
+        "value": 21
+      },
+      "F5": {
+        "value": 13
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMERDATA"
+      },
+      "F2": {
+        "value": "entries"
+      },
+      "F4": {
+        "value": 21
+      },
+      "F5": {
+        "value": 36
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "gl_entry"
+      },
+      "F4": {
+        "value": 17
+      },
+      "F5": {
+        "value": 1
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "gl_entry"
+      },
+      "F4": {
+        "value": 17
+      },
+      "F5": {
+        "value": 3
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "gl_entry"
+      },
+      "F4": {
+        "value": 17
+      },
+      "F5": {
+        "value": 4
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "gl_entry"
+      },
+      "F4": {
+        "value": 17
+      },
+      "F5": {
+        "value": 5
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "gl_entry"
+      },
+      "F4": {
+        "value": 17
+      },
+      "F5": {
+        "value": 6
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "gl_entry"
+      },
+      "F4": {
+        "value": 17
+      },
+      "F5": {
+        "value": 7
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "gl_entry"
+      },
+      "F4": {
+        "value": 17
+      },
+      "F5": {
+        "value": 17
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "gl_entry"
+      },
+      "F4": {
+        "value": 17
+      },
+      "F5": {
+        "value": 23
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "gl_entry"
+      },
+      "F4": {
+        "value": 17
+      },
+      "F5": {
+        "value": 24
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "gl_entry"
+      },
+      "F4": {
+        "value": 17
+      },
+      "F5": {
+        "value": 27
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "gl_entry"
+      },
+      "F4": {
+        "value": 17
+      },
+      "F5": {
+        "value": 48
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "item"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 1
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "item"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 3
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "price"
+      },
+      "F4": {
+        "value": 7002
+      },
+      "F5": {
+        "value": 3
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "price"
+      },
+      "F4": {
+        "value": 7002
+      },
+      "F5": {
+        "value": 5
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 1
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 3
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 10
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 68
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 69
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 70
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 71
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 72
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 73
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 74
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 77
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 78
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 79
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 80
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 83
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 84
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 85
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 93
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 94
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 101
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 102
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 103
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 107
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 108
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 109
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 110
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 929
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 930
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 977
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 978
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 1001
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 1002
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 5420
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ITEMJSON"
+      },
+      "F2": {
+        "value": "items"
+      },
+      "F4": {
+        "value": 27
+      },
+      "F5": {
+        "value": 5421
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "planning"
+      },
+      "F4": {
+        "value": 1003
+      },
+      "F5": {
+        "value": 3
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "planning"
+      },
+      "F4": {
+        "value": 1003
+      },
+      "F5": {
+        "value": 5
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "planning"
+      },
+      "F4": {
+        "value": 1003
+      },
+      "F5": {
+        "value": 7
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "planning"
+      },
+      "F4": {
+        "value": 1003
+      },
+      "F5": {
+        "value": 8
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "planning"
+      },
+      "F4": {
+        "value": 1003
+      },
+      "F5": {
+        "value": 9
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "planning"
+      },
+      "F4": {
+        "value": 1003
+      },
+      "F5": {
+        "value": 84
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "planning"
+      },
+      "F4": {
+        "value": 1003
+      },
+      "F5": {
+        "value": 5790
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "planning"
+      },
+      "F4": {
+        "value": 1003
+      },
+      "F5": {
+        "value": 5791
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "planning"
+      },
+      "F4": {
+        "value": 1003
+      },
+      "F5": {
+        "value": 5794
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "project"
+      },
+      "F4": {
+        "value": 167
+      },
+      "F5": {
+        "value": 1
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "project"
+      },
+      "F4": {
+        "value": 167
+      },
+      "F5": {
+        "value": 3
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "tasks"
+      },
+      "F4": {
+        "value": 1001
+      },
+      "F5": {
+        "value": 1
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "tasks"
+      },
+      "F4": {
+        "value": 1001
+      },
+      "F5": {
+        "value": 2
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "tasks"
+      },
+      "F4": {
+        "value": 1001
+      },
+      "F5": {
+        "value": 3
+      },
+      "F10": {
+        "value": true
+      },
+      "F11": {
+        "value": false
+      }
+    }
+  ]
+}

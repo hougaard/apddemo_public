@@ -1,0 +1,71 @@
+<html lang="en" data-theme="light">
+<head>
+  <?parse('header.html')?>
+  <title>Advanced Portal Designer - Customer Statement</title>
+</head>
+<body>
+    <?parse('navbar.html')?>
+     <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li class="is-active">Statement</li>
+      </ul>
+    </nav>
+    <div class="columns mt-4">
+        <div class="column"></div>
+        <div class="column is-four-fifths">
+            <?open(Customer)?>
+            <?open("Cust. Ledger Entry",'sorting("Customer No.", "Posting Date", "Currency Code")')?>
+            <h2 class="title">Statement for <?field(Customer,Name)?></h2>
+            <h2 class="is-size-4 mb-3">Current Balance <?field(Customer,Balance,'<Precision,2:2><Standard Format,0>')?> <?field("Cust. Ledger Entry","Currency Code")?> Download PDFs by clicking on the document number</h2>
+            <table class="table table is-striped is-fullwidth">
+                <thead>
+                     <th>Posting Date</th>
+                     <th>Document Type</th>
+                     <th>Document No.</th>
+                     <th>Description</th>
+                     <th class="has-text-right">Amount <?field("Cust. Ledger Entry","Currency Code")?></th>
+                     <th class="has-text-right">Open Amount <?field("Cust. Ledger Entry","Currency Code")?></th>
+                </thead>
+                <tfoot>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
+                     <th class="has-text-right">Total <?field("Cust. Ledger Entry","Currency Code")?></th>
+                     <th class="has-text-right"><?field(Customer,Balance,'<Precision,2:2><Standard Format,0>')?></th>
+                </tfoot>
+                <tbody>
+                    <?loop("Cust. Ledger Entry",'-')?>
+                    <tr>
+                        <th><?field("Cust. Ledger Entry","Posting Date")?></th>
+                        <td><?field("Cust. Ledger Entry","Document Type")?></td>
+                        <?if("Cust. Ledger Entry","Document Type",'=',2)?>
+                            <td><a href="<?action('INVOICE')?>&invoice=<?field("Cust. Ledger Entry","Document No.")?>"><?field("Cust. Ledger Entry","Document No.")?></a></td>
+                        <?else?>
+                            <?if("Cust. Ledger Entry","Document Type",'=',3)?>
+                                <td><a href="<?action('CREDITMEMO')?>&creditmemo=<?field("Cust. Ledger Entry","Document No.")?>"><?field("Cust. Ledger Entry","Document No.")?></a></td>
+                            <?else?>
+                                <td><?field("Cust. Ledger Entry","Document No.")?></td>
+                            <?endif?>
+                        <?endif?>
+                        <td>
+                            <?field("Cust. Ledger Entry","Description")?>
+                        </td>
+                        <td class="has-text-right"><?field("Cust. Ledger Entry",Amount)?></td>
+                        <td class="has-text-right"><?field("Cust. Ledger Entry","Remaining Amount",'<Precision,2:2><Standard Format,0>')?></td>
+                    </tr>
+                    <?loopend("Cust. Ledger Entry",1,30)?>
+                </tbody>
+            </table>
+            <div class="is-justify-content-left">
+                <p class="level-item is-justify-content-left"><a class="button level-item mr-3" href="<?prev("Cust. Ledger Entry",1)?>">Previous</a>
+                Page <?pageno("Cust. Ledger Entry",30,1)?> of <?pages("Cust. Ledger Entry",30,1)?>
+                <a class="ml-3 button level-item" href="<?next("Cust. Ledger Entry",1)?>">Next</a></p>
+            </div>
+         </div>
+        <div class="column"></div>
+    </div>
+    <?parse('footer.html')?>
+</body>
+</html>

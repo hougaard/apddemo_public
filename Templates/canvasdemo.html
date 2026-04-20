@@ -1,0 +1,56 @@
+<html lang="en" data-theme="light">
+<head>
+  <?parse('header.html')?>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <title>Advanced Portal Designer - canvasJS Example</title>
+</head>
+<body>
+    <?parse('navbar.html')?>
+     <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li class="is-active"><a href="#">canvasJS Example</a></li>
+      </ul>
+    </nav>
+    <div class="columns mt-4">
+        <div class="column is-four-fifths m-3">
+            <div id="chartContainer" style="height: 80vh; width: 100%;"></div>
+        </div>
+        <div class="column">
+            <div>
+                <p class="title is-size-3">canvasJS</p>
+                <p>See the raw data source <a href="<?action('itemjson')?>" target="_blank">here</a>, this is an Advanced Portal Designer Data action, exposing Business Central data as JSON with all security rules applied.<br/><br/>Read more about <a href="https://www.canvasjs.com" target="_blank">canvasJS</a>.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    window.onload = function () {
+    var dataPoints = [];
+    var chart = new CanvasJS.Chart("chartContainer",{
+    	title:{
+    		text:"Item Sales"
+    	},
+    	axisY: {
+		    title: "Sales ($)"
+	    },
+    	data: [{
+    		type: "column",
+    		dataPoints : dataPoints,
+    	}]
+    });
+    $.getJSON("<?action('itemjson')?>", function(data) {
+        console.log(data);
+    	$.each(data["items"], function(key, value){
+    	    console.log(key,value);
+    		dataPoints.push({label: value["Description"], y: parseFloat(value["Sales_LCY"])});
+    	});	
+    	console.log(dataPoints);
+    	chart.render();
+    });
+    }
+    </script>
+    <?parse('footer.html')?>
+</body>
+</html>

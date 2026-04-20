@@ -1,0 +1,77 @@
+<html lang="en" data-theme="light">
+<head>
+  <?parse('header.html')?>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
+  <title>Advanced Portal Designer - DataTables Example</title>
+</head>
+<body>
+    <?parse('navbar.html')?>
+     <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li class="is-active"><a href="#">DataTables Example</a></li>
+      </ul>
+    </nav>
+    <div class="columns mt-4">
+        <div class="column is-four-fifths m-3">
+            <table id="example" class="table is-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Entry No.</th>
+                        <th>G/L Account No.</th>
+                        <th>Posting Date</th>
+                        <th>Document Type</th>
+                        <th>Document No.</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Global Dimension 1</th>
+                        <th>Global Dimension 2</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Entry No.</th>
+                        <th>G/L Account No.</th>
+                        <th>Posting Date</th>
+                        <th>Document Type</th>
+                        <th>Document No.</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Global Dimension 1</th>
+                        <th>Global Dimension 2</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="column">
+            <div>
+                <p class="title is-size-3">DataTables</p>
+                <p>See the raw data source <a href="<?action('datajson')?>" target="_blank">here</a>, this is an Advanced Portal Designer Data action, exposing Business Central data as JSON with all security rules applied. The dataset is 3500 records and all 3500 records are loaded from the start to show how fast this is.<br/><br/>Read more about <a href="https://www.datatables.net" target="_blank">DataTables</a>.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        new DataTable('#example', {
+            ajax: {
+                    url: '<?action('datajson')?>',
+                    dataSrc: 'gl_entry',
+                  },
+            columns: [ 
+                {data: 'Entry_No'},
+                {data: 'G_L_Account_No'},
+                {data: 'Posting_Date'},
+                {data: 'Document_Type'},
+                {data: 'Document_No'},
+                {data: 'Description'},
+                {data: 'Amount'},
+                {data: 'Global_Dimension_1_Code'},
+                {data: 'Global_Dimension_2_Code'}
+                ],
+            pageLength: 15
+        });
+    </script>
+    <?parse('footer.html')?>
+</body>
+</html>

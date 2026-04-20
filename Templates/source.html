@@ -1,0 +1,65 @@
+<html lang="en" data-theme="light">
+<head>
+  <?parse('header.html')?>
+  <script src="/ace/ace.js"></script>
+  <script src="/ace/mode-html.js"></script>
+  <script src="/ace/theme-twilight.js"></script>
+  <title>Advanced Portal Designer Source Code</title>
+</head>
+<body>
+    <nav class="navbar is-white has-shadow">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/demo">
+            <img src="<?action('logo')?>&79:1=" style="max-height: 70px" class="py-2 px-2">
+          </a>
+        </div>
+    </nav>
+    <div class="columns mt-4">
+    <div class="column is-one-fifth"></div>
+    <div class="column has-text-centered">
+        <?open("APD Action Hgd")?>
+        <?filter("APD Action Hgd","Web Action",parm('sourceaction'))?>
+        <?loop("APD Action Hgd",'-')?><?loopend("APD Action Hgd",1,1)?>
+        <p class="title">Source code for action <?field("APD Action Hgd","Web Action")?></p>
+        <p class="mb-3">Ready more about how to build templates <a href="https://www.hougaard.com/portaldesigner" target="_blank" >here</a>.</p>
+        <?open("APD HTML Template Hgd")?>
+        <?if(0,parm('template'),'<>','')?>
+            <?filter("APD Html Template Hgd","Name",parm('template'))?>
+        <?else?>
+            <?filter("APD Html Template Hgd","Name",field(70310519,100))?>
+        <?endif?>
+        <?loop("APD Html Template Hgd",'-')?>
+            <div id="editor" style="height: 500px;"><?field("APD Html Template Hgd",HTML)?></div>
+        <?loopend("APD Html Template Hgd",1,1)?>
+        <article class="message is-info mt-3">
+            <div class="message-header">
+                <p>Template used on this page</p>
+            </div>
+            <div class="message-body has-text-left grid">
+                <a class="button is-primary mr-2" 
+                       href="<?action('source')?>&sourceaction=<?parm('sourceaction')?>&template=">
+                        <?field(70310519,100)?>
+                    </a>
+                <?open("APD Used Template Hgd")?>
+                <?filter("APD Used Template Hgd","Web Action",parm('sourceaction'))?>
+                <?loop("APD Used Template Hgd",'-')?>
+                    <a class="button is-success-dark mr-2" 
+                       href="<?action('source')?>&sourceaction=<?parm('sourceaction')?>&template=<?field("APD Used Template Hgd",template)?>">
+                        <?field("APD Used Template Hgd",template)?>
+                    </a>
+                <?loopend("APD Used Template Hgd",1,100)?>
+            </div>
+        </article>
+    </div>
+    <div class="column is-one-fifth"></div>
+    </div>
+    <script>
+        var editor = ace.edit("editor");
+        editor.setShowPrintMargin(false);
+        editor.setTheme("ace/theme/twilight");
+        editor.session.setMode("ace/mode/html");
+        editor.setReadOnly(true);
+        editor.setFontSize(14);
+    </script>
+</body>
+</html>

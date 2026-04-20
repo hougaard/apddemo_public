@@ -1,0 +1,370 @@
+{
+  "Table": "APD Report Action Filter Hgd",
+  "No": 70310508,
+  "Records": [
+    {
+      "F1": {
+        "value": "CREDITMEMO"
+      },
+      "F2": {
+        "value": 1307
+      },
+      "F3": {
+        "value": 1240373886
+      },
+      "F99": {
+        "value": 2
+      },
+      "F5": {
+        "value": 114
+      },
+      "F8": {
+        "value": 1
+      },
+      "F9": {
+        "value": "creditmemo"
+      },
+      "F10": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "INVOICE"
+      },
+      "F2": {
+        "value": 1306
+      },
+      "F3": {
+        "value": 1240373886
+      },
+      "F99": {
+        "value": 2
+      },
+      "F5": {
+        "value": 112
+      },
+      "F8": {
+        "value": 4
+      },
+      "F9": {
+        "value": ""
+      },
+      "F10": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "INVOICE"
+      },
+      "F2": {
+        "value": 1306
+      },
+      "F3": {
+        "value": 1240373886
+      },
+      "F99": {
+        "value": 3
+      },
+      "F5": {
+        "value": 112
+      },
+      "F8": {
+        "value": 1
+      },
+      "F9": {
+        "value": "invoice"
+      },
+      "F10": {
+        "value": true
+      }
+    },
+    {
+      "F1": {
+        "value": "ORDER.CONFIRMATION"
+      },
+      "F2": {
+        "value": 1305
+      },
+      "F3": {
+        "value": 1240373886
+      },
+      "F99": {
+        "value": 1
+      },
+      "F5": {
+        "value": 36
+      },
+      "F8": {
+        "value": 0
+      },
+      "F9": {
+        "value": "1"
+      },
+      "F10": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ORDER.CONFIRMATION"
+      },
+      "F2": {
+        "value": 1305
+      },
+      "F3": {
+        "value": 1240373886
+      },
+      "F99": {
+        "value": 2
+      },
+      "F5": {
+        "value": 36
+      },
+      "F8": {
+        "value": 4
+      },
+      "F9": {
+        "value": ""
+      },
+      "F10": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "ORDER.CONFIRMATION"
+      },
+      "F2": {
+        "value": 1305
+      },
+      "F3": {
+        "value": 1240373886
+      },
+      "F99": {
+        "value": 3
+      },
+      "F5": {
+        "value": 36
+      },
+      "F8": {
+        "value": 1
+      },
+      "F9": {
+        "value": "orderno"
+      },
+      "F10": {
+        "value": true
+      }
+    },
+    {
+      "F1": {
+        "value": "PAY.RECEIPT"
+      },
+      "F2": {
+        "value": 211
+      },
+      "F3": {
+        "value": 586433803
+      },
+      "F99": {
+        "value": 3
+      },
+      "F5": {
+        "value": 21
+      },
+      "F8": {
+        "value": 4
+      },
+      "F9": {
+        "value": ""
+      },
+      "F10": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "PAY.RECEIPT"
+      },
+      "F2": {
+        "value": 211
+      },
+      "F3": {
+        "value": 586433803
+      },
+      "F99": {
+        "value": 6
+      },
+      "F5": {
+        "value": 21
+      },
+      "F8": {
+        "value": 0
+      },
+      "F9": {
+        "value": "doc"
+      },
+      "F10": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "PURCHASEORDERREPORT"
+      },
+      "F2": {
+        "value": 405
+      },
+      "F3": {
+        "value": 74490983
+      },
+      "F99": {
+        "value": 2
+      },
+      "F5": {
+        "value": 38
+      },
+      "F8": {
+        "value": 4
+      },
+      "F9": {
+        "value": ""
+      },
+      "F10": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "PURCHASEORDERREPORT"
+      },
+      "F2": {
+        "value": 405
+      },
+      "F3": {
+        "value": 74490983
+      },
+      "F99": {
+        "value": 3
+      },
+      "F5": {
+        "value": 38
+      },
+      "F8": {
+        "value": 1
+      },
+      "F9": {
+        "value": "orderno"
+      },
+      "F10": {
+        "value": true
+      }
+    },
+    {
+      "F1": {
+        "value": "SALESQUOTE.PRINT"
+      },
+      "F2": {
+        "value": 1304
+      },
+      "F3": {
+        "value": 1240373886
+      },
+      "F99": {
+        "value": 1
+      },
+      "F5": {
+        "value": 36
+      },
+      "F8": {
+        "value": 0
+      },
+      "F9": {
+        "value": "0"
+      },
+      "F10": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "SALESQUOTE.PRINT"
+      },
+      "F2": {
+        "value": 1304
+      },
+      "F3": {
+        "value": 1240373886
+      },
+      "F99": {
+        "value": 3
+      },
+      "F5": {
+        "value": 36
+      },
+      "F8": {
+        "value": 1
+      },
+      "F9": {
+        "value": "36:3"
+      },
+      "F10": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "VENDOR.INVOICE"
+      },
+      "F2": {
+        "value": 406
+      },
+      "F3": {
+        "value": 555103673
+      },
+      "F99": {
+        "value": 2
+      },
+      "F5": {
+        "value": 122
+      },
+      "F8": {
+        "value": 4
+      },
+      "F9": {
+        "value": ""
+      },
+      "F10": {
+        "value": false
+      }
+    },
+    {
+      "F1": {
+        "value": "VENDOR.INVOICE"
+      },
+      "F2": {
+        "value": 406
+      },
+      "F3": {
+        "value": 555103673
+      },
+      "F99": {
+        "value": 3
+      },
+      "F5": {
+        "value": 122
+      },
+      "F8": {
+        "value": 1
+      },
+      "F9": {
+        "value": "invoice"
+      },
+      "F10": {
+        "value": true
+      }
+    }
+  ]
+}

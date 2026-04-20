@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <?parse('header.html')?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <?parse('navbar.html')?>
+    <?open("Job")?>
+    <?filter("Job","No.",parm('167:1'))?>
+    <?loop(Job,'-')?>
+    <?loopend(Job,1,1)?>
+    <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="<?action('projects')?>">Projects</a></li>
+        <li class="is-active"><a href="#"><?field("Job","No.")?></a></li>
+      </ul>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <div class="card">
+                <div class="card-content">
+                    <div class="columns">
+                        <!--<div class="column is-one-quarter">-->
+                        <!--    <figure class="image is-4by3">-->
+                        <!--        <img src="<?action('projectpicture',"Job")?>" alt="Product Image">-->
+                        <!--    </figure>-->
+                        <!--</div>-->
+                        <div class="column">
+                            <table class="table is-fullwidth">
+                                <tbody>
+                                    <tr>
+                                        <th colspan="2" class="title is-info"><?field("Job","No.")?> <?field("Job","Description")?></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Creation Date</th>
+                                        <td><?field("Job","Creation Date")?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Starting Date</th>
+                                        <td><?field("Job","Starting Date")?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ending Date</th>
+                                        <td><?field("Job","Ending Date")?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Status</th>
+                                        <td><?field("Job","Status")?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Person Responsible</th>
+                                        <td><?field("Job","Person Responsible")?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Your Reference</th>
+                                        <td><?field("Job","Your Reference")?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table is-striped is-fullwidth">
+                                <thead>
+                                    <tr>
+                                        <th>Job Task No.</th>
+                                        <th>Description</th>
+                                        <th>Job Task Type</th>
+                                        <th>Schedule (Total Price)</th>
+                                        <th>Usage (Total Price)</th>
+                                        <th>Contract (Total Price)</th>
+                                        <th>Contract (Invoiced Price)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?open("Job Task")?>
+                                    <?filter("Job Task","Job No.",field(167,1))?>
+                                    <?loop("Job Task",'-')?>
+                                    <tr>
+                                        <td><?field("Job Task","Job Task No.")?></td>
+                                        <td><?field("Job Task","Description")?></td>
+                                        <td><?field("Job Task","Job Task Type")?></td>
+                                        <td><?field("Job Task","Schedule (Total Price)")?></td>
+                                        <td><?field("Job Task","Usage (Total Price)")?></td>
+                                        <td><?field("Job Task","Contract (Total Price)")?></td>
+                                        <td><?field("Job Task","Contract (Invoiced Price)")?></td>
+                                    </tr>
+                                    <?loopend("Job Task",1,20)?>
+                                    <?close("Job Task")?>
+                                    <?close("Job")?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?parse('footer.html')?>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <?parse('header.html')?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css">
+</head>
+<body>
+    <?parse('navbar.html')?>
+    <?open("Sales Header")?>
+    <?filter("Sales Header","Document Type",1)?>
+    <?filter("Sales Header","No.",parm('36:3'))?>
+    <?loop("Sales Header",'-')?><?loopend("Sales Header",1,1)?>
+    <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="<?action('salesorders')?>">Sales Orders</a></li>
+        <li class="is-active"><a href="#"><?field("Sales Header","No.")?></a></li>
+      </ul>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <div class="card">
+               <div class="card-content">
+                    <div class="content">
+                        <table class="table is-fullwidth">
+                            <tbody>
+                                <tr>
+                                    <td class="title is-info" colspan="2">Sales Order <?field("Sales Header", "No.")?>
+                                        <a class="button ml-3 is-success" href="<?action('salesorder.edit',"Sales Header")?>">Edit</a>
+                                        <a class="button ml-3 is-warning" href="<?action('ORDER.CONFIRMATION')?>&orderno=<?field("Sales Header","No.")?>">Print</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ship-to Name</td>
+                                    <td>
+                                        <?field("Sales Header", "Ship-to Name")?><br/>
+                                        <?field("Sales Header", "Ship-to Address")?><br/>
+                                        <?field("Sales Header", "Ship-to City")?> <?field("Sales Header", "Ship-to Post Code")?> <?field("Sales Header", "Ship-to County")?><br/>
+                                        <?field("Sales Header", "Ship-to Country/Region Code")?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Your Reference</td>
+                                    <td><?field("Sales Header", "Your Reference")?></td>
+                                </tr>
+                                <tr>
+                                    <td>Order Date</td>
+                                    <td><?field("Sales Header", "Order Date")?></td>
+                                </tr>
+                                <tr>
+                                    <td>Posting Date</td>
+                                    <td><?field("Sales Header", "Posting Date")?></td>
+                                </tr>
+                                <tr>
+                                    <td>Shipment Date</td>
+                                    <td><?field("Sales Header", "Shipment Date")?></td>
+                                </tr>
+                                <tr>
+                                    <td>Due Date</td>
+                                    <td><?field("Sales Header", "Due Date")?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <?open("Sales Line")?>
+                        <?filter("Sales Line","Document No.",field(36,3))?>
+                        <table class="table is-striped is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>No.</th>
+                                    <th>Description</th>
+                                    <th class="has-text-right">Quantity</th>
+                                    <th class="has-text-right">Unit Price</th>
+                                    <th class="has-text-right">Line Discount %</th>
+                                    <th class="has-text-right">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?loop("Sales Line",'-')?>
+                                <tr>
+                                    <td><?field("Sales Line","Type")?></td>
+                                    <td><?field("Sales Line","No.")?></td>
+                                    <td><?field("Sales Line","Description")?></td>
+                                    <td class="has-text-right"><?field("Sales Line","Quantity")?></td>
+                                    <td class="has-text-right"><?field("Sales Line","Unit Price")?></td>
+                                    <td class="has-text-right"><?field("Sales Line","Line Discount %")?></td>
+                                    <td class="has-text-right"><?field("Sales Line","Amount")?></td>
+                                </tr>
+                                <?loopend("Sales Line",1,20)?>
+                            </tbody>
+                        </table>
+                        <?close("Sales Line")?>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                          <table class="table is-fullwidth">
+                            <tbody>
+                                <tr>
+                                    <td>Amount</td>
+                                    <td class="has-text-right"><?field("Sales Header", "Amount")?></td>
+                                </tr>
+                                <tr>
+                                    <td>Amount Including VAT</td>
+                                    <td class="has-text-right"><?field("Sales Header", "Amount Including VAT")?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <?close("Sales Header")?>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
+    <?parse('footer.html')?>
+</body>
+</html>

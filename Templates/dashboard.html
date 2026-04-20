@@ -1,0 +1,42 @@
+<html lang="en" data-theme="light">
+<head>
+  <?parse('header.html')?>
+  <title>Advanced Portal Designer - Demo Dashboard</title>
+</head>
+<body>
+    <?parse('navbar.html')?>
+    <div class="columns mt-4">
+        <div class="column"></div>
+        <div class="column is-four-fifths">
+            <?open(Customer)?>
+            <div class="title">Welcome <?field(Customer,Name)?></div>
+            <?close(Customer)?>
+            <div class="is-size-5">Browser our wonderful range of exciting furnitures:</div>
+            <div class="grid mt-3 is-col-min-9 column-gap-3">
+                <?open(Item)?>
+                <?filter(Item,"Inventory Posting Group",'RESALE')?>
+                <?loop(Item,'+')?>
+                    <div class="cell box py-3 px-4 has-text-primary-25 has-radius-normal has-text-centered" style="width:230px;height: 250px;">
+                        <a href="<?action('itemcard',Item)?>" class="is-color-black">
+                        <img src="<?action('itempicture',Item)?>" style="width: 150px; height: 150px;"/>
+                        <br/>
+                        <strong><?field(Item,Description)?></strong></a>
+                    </div>
+                <?loopend(Item,-1,100)?>
+                <?close(Item)?>
+            </div>
+            <article class="message is-info">
+              <div class="message-header">
+                <p>Information</p>
+              </div>
+              <div class="message-body">
+                  Take a look at the <strong>See the source for this page</strong> to figure out how any page on this site is created.
+                  Some pages are built using the Copilot driven template Wizard, others are built by hand.
+              </div>
+            </article>
+        </div>
+        <div class="column"></div>
+    </div>
+    <?parse('footer.html')?>
+</body>
+</html>

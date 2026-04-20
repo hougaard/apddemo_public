@@ -1,0 +1,119 @@
+<html lang="en" data-theme="light">
+<head>
+  <?parse('header.html')?>
+  <title>Advanced Portal Designer - Bank Account</title>
+</head>
+<body>
+    <?parse('navbar.html')?>
+    <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="<?action('VENDOR.BANK.ACCOUNT.LIST')?>">Bank Accounts</a></li>
+        <li class="is-active"><a href="#">Edit</a></li>
+      </ul>
+    </nav>
+    <?open("Vendor Bank Account")?>
+    <?filter("vendor bank account",Code,parm('288:2'))?>
+    <section class="section">
+        <div class="container">
+            <div class="card">
+                <header class="card-header is-info">
+                    <p class="card-header-title">
+                        Vendor Bank Account <?field("Vendor Bank Account", "Code")?>
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <form>
+                            <table class="table is-fullwidth">
+                                <tbody>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td><?edit("Vendor Bank Account", "Name",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Name 2</td>
+                                        <td><?edit("Vendor Bank Account", "Name 2",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address</td>
+                                        <td><?edit("Vendor Bank Account", "Address",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address 2</td>
+                                        <td><?edit("Vendor Bank Account", "Address 2",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>City</td>
+                                        <td><?edit("Vendor Bank Account", "City",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Post Code</td>
+                                        <td><?edit("Vendor Bank Account", "Post Code",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Contact</td>
+                                        <td><?edit("Vendor Bank Account", "Contact",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone No.</td>
+                                        <td><?edit("Vendor Bank Account", "Phone No.",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank Branch No.</td>
+                                        <td><?edit("Vendor Bank Account", "Bank Branch No.",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank Account No.</td>
+                                        <td><?edit("Vendor Bank Account", "Bank Account No.",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Transit No.</td>
+                                        <td><?edit("Vendor Bank Account", "Transit No.",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Currency Code</td>
+                                        <td><?edit("Vendor Bank Account", "Currency Code",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Country/Region Code</td>
+                                        <td><?edit("Vendor Bank Account", "Country/Region Code",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>County</td>
+                                        <td><?edit("Vendor Bank Account", "County",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>E-Mail</td>
+                                        <td><?edit("Vendor Bank Account", "E-Mail",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>IBAN</td>
+                                        <td><?edit("Vendor Bank Account", "IBAN",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>SWIFT Code</td>
+                                        <td><?edit("Vendor Bank Account", "SWIFT Code",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank Clearing Code</td>
+                                        <td><?edit("Vendor Bank Account", "Bank Clearing Code",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank Clearing Standard</td>
+                                        <td><?edit("Vendor Bank Account", "Bank Clearing Standard",'class="field input has-text-left"')?></td>
+                                    </tr>
+                                    <?close("Vendor Bank Account")?>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?parse('footer.html')?>
+</body>
+</html>
+</body>
+</html>

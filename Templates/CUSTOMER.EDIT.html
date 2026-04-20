@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?parse('header.html')?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Card</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Customer Details
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <form>
+                            <table class="table is-fullwidth">
+                                <tbody>
+                                    <tr>
+                                        <th>No.</th>
+                                        <td class="has-text-right"><?open(Customer)?><?show(Customer,"No.")?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Name</th>
+                                        <td><?edit(Customer,Name)?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Address</th>
+                                        <td><?edit(Customer,Address)?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Blocked</th>
+                                        <td><?select(Customer,Blocked)?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Customer Posting Group</th>
+                                        <?open("Customer Posting Group")?>
+                                        <td><?select2(Customer,"Customer Posting Group","Customer Posting Group",Code,Description)?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                        <?close(Customer)?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

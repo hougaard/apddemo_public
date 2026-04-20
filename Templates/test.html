@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <?parse('header.html')?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test of SetValue/GetValue</title>
+</head>
+<body>
+    <p>hello <?getvalue('test')?></p>
+    <button onclick="APD_Set('test','new world');">Press me!</button>
+    <?hasvalue('test')?>
+        </p>Has Value blob</p>
+    <?endif?>
+</body>
+<script>
+    if(APD_Has('test'))
+        document.write('</br>has value: ' + APD_Get('test'));
+</script>
+</html>

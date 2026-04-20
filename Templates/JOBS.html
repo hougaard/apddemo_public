@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <?parse('header.html')?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css">
+</head>
+<body>
+    <?parse('navbar.html')?>
+    <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li class="is-active"><a href="#">Projects</a></li>
+      </ul>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Project List</h1>
+            <?open(Job)?>
+            <table class="table is-striped is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Description</th>
+                        <th>Starting Date</th>
+                        <th>Ending Date</th>
+                        <th>Status</th>
+                        <th>Project Manager</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?loop(Job, '-')?>
+                    <tr>
+                        <td><a href="<?action('project',Job)?>"><?field("Job","No.")?></a></td>
+                        <td><?field(Job,Description)?></td>
+                        <td><?field("Job","Starting Date")?></td>
+                        <td><?field("Job","Ending Date")?></td>
+                        <td><?field(Job,Status)?></td>
+                        <td><?field(job,"Project Manager")?></td>
+                    </tr>
+                    <?loopend(Job, 1, 20)?>
+                </tbody>
+            </table>
+            <?close(Job)?>
+        </div>
+    </section>
+    <?parse('footer.html')?>
+</body>
+</html>

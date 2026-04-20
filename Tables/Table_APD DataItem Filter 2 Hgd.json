@@ -1,0 +1,198 @@
+{
+  "Table": "APD DataItem Filter 2 Hgd",
+  "No": 70310518,
+  "Records": [
+    {
+      "F1": {
+        "value": "CUSTOMERDATA"
+      },
+      "F2": {
+        "value": "customer"
+      },
+      "F4": {
+        "value": 1
+      },
+      "F3": {
+        "value": 18
+      },
+      "F6": {
+        "value": 0
+      },
+      "F8": {
+        "value": 3
+      },
+      "F9": {
+        "value": "customer"
+      },
+      "F10": {
+        "value": 0
+      },
+      "F5": {
+        "value": "No."
+      },
+      "F11": {
+        "value": ""
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMERDATA"
+      },
+      "F2": {
+        "value": "entries"
+      },
+      "F4": {
+        "value": 3
+      },
+      "F3": {
+        "value": 21
+      },
+      "F6": {
+        "value": 18
+      },
+      "F8": {
+        "value": 0
+      },
+      "F9": {
+        "value": ""
+      },
+      "F10": {
+        "value": 1
+      },
+      "F5": {
+        "value": "Customer No."
+      },
+      "F11": {
+        "value": "No."
+      }
+    },
+    {
+      "F1": {
+        "value": "DATAJSON"
+      },
+      "F2": {
+        "value": "price"
+      },
+      "F4": {
+        "value": 1
+      },
+      "F3": {
+        "value": 7002
+      },
+      "F6": {
+        "value": 27
+      },
+      "F8": {
+        "value": 0
+      },
+      "F9": {
+        "value": ""
+      },
+      "F10": {
+        "value": 1
+      },
+      "F5": {
+        "value": "Item No."
+      },
+      "F11": {
+        "value": "No."
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "planning"
+      },
+      "F4": {
+        "value": 1
+      },
+      "F3": {
+        "value": 1003
+      },
+      "F6": {
+        "value": 1001
+      },
+      "F8": {
+        "value": 0
+      },
+      "F9": {
+        "value": ""
+      },
+      "F10": {
+        "value": 1
+      },
+      "F5": {
+        "value": "Line No."
+      },
+      "F11": {
+        "value": "Job No."
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "planning"
+      },
+      "F4": {
+        "value": 1000
+      },
+      "F3": {
+        "value": 1003
+      },
+      "F6": {
+        "value": 1001
+      },
+      "F8": {
+        "value": 0
+      },
+      "F9": {
+        "value": ""
+      },
+      "F10": {
+        "value": 2
+      },
+      "F5": {
+        "value": "Job Task No."
+      },
+      "F11": {
+        "value": "Job Task No."
+      }
+    },
+    {
+      "F1": {
+        "value": "JOBTASKJSON"
+      },
+      "F2": {
+        "value": "tasks"
+      },
+      "F4": {
+        "value": 1
+      },
+      "F3": {
+        "value": 1001
+      },
+      "F6": {
+        "value": 167
+      },
+      "F8": {
+        "value": 0
+      },
+      "F9": {
+        "value": ""
+      },
+      "F10": {
+        "value": 1
+      },
+      "F5": {
+        "value": "Job No."
+      },
+      "F11": {
+        "value": "No."
+      }
+    }
+  ]
+}

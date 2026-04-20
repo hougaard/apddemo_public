@@ -1,0 +1,54 @@
+{
+  "Table": "APD Security Profile Hgd",
+  "No": 70310514,
+  "Records": [
+    {
+      "F1": {
+        "value": "BASICUSER"
+      },
+      "F2": {
+        "value": "Basic Authentication User"
+      }
+    },
+    {
+      "F1": {
+        "value": "CONTACT"
+      },
+      "F2": {
+        "value": "Contact"
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMER"
+      },
+      "F2": {
+        "value": "Customer"
+      }
+    },
+    {
+      "F1": {
+        "value": "INTERNAL"
+      },
+      "F2": {
+        "value": "Sales Person"
+      }
+    },
+    {
+      "F1": {
+        "value": "RESOURCE"
+      },
+      "F2": {
+        "value": "Resource"
+      }
+    },
+    {
+      "F1": {
+        "value": "VENDOR"
+      },
+      "F2": {
+        "value": "Vendor"
+      }
+    }
+  ]
+}

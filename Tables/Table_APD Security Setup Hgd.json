@@ -1,0 +1,617 @@
+{
+  "Table": "APD Security Setup Hgd",
+  "No": 70310515,
+  "Records": [
+    {
+      "F1": {
+        "value": ""
+      },
+      "F2": {
+        "value": 1
+      },
+      "F3": {
+        "value": ""
+      },
+      "F10": {
+        "value": 36
+      },
+      "F11": {
+        "value": 0
+      },
+      "F12": {
+        "value": ""
+      },
+      "F14": {
+        "value": true
+      },
+      "F15": {
+        "value": true
+      },
+      "F16": {
+        "value": false
+      },
+      "F17": {
+        "value": false
+      },
+      "F20": {
+        "value": false
+      },
+      "F21": {
+        "value": false
+      },
+      "F22": {
+        "value": false
+      },
+      "F101": {
+        "value": ""
+      },
+      "F100": {
+        "value": "Sales Header"
+      }
+    },
+    {
+      "F1": {
+        "value": "CONTACT"
+      },
+      "F2": {
+        "value": 0
+      },
+      "F3": {
+        "value": ""
+      },
+      "F10": {
+        "value": 5050
+      },
+      "F11": {
+        "value": 1
+      },
+      "F12": {
+        "value": "%4"
+      },
+      "F14": {
+        "value": false
+      },
+      "F15": {
+        "value": false
+      },
+      "F16": {
+        "value": false
+      },
+      "F17": {
+        "value": false
+      },
+      "F20": {
+        "value": false
+      },
+      "F21": {
+        "value": false
+      },
+      "F22": {
+        "value": false
+      },
+      "F101": {
+        "value": "No."
+      },
+      "F100": {
+        "value": "Contact"
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMER"
+      },
+      "F2": {
+        "value": 0
+      },
+      "F3": {
+        "value": ""
+      },
+      "F10": {
+        "value": 18
+      },
+      "F11": {
+        "value": 1
+      },
+      "F12": {
+        "value": "%4"
+      },
+      "F14": {
+        "value": false
+      },
+      "F15": {
+        "value": false
+      },
+      "F16": {
+        "value": false
+      },
+      "F17": {
+        "value": false
+      },
+      "F20": {
+        "value": false
+      },
+      "F21": {
+        "value": false
+      },
+      "F22": {
+        "value": false
+      },
+      "F101": {
+        "value": "No."
+      },
+      "F100": {
+        "value": "test"
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMER"
+      },
+      "F2": {
+        "value": 0
+      },
+      "F3": {
+        "value": ""
+      },
+      "F10": {
+        "value": 21
+      },
+      "F11": {
+        "value": 3
+      },
+      "F12": {
+        "value": "%4"
+      },
+      "F14": {
+        "value": false
+      },
+      "F15": {
+        "value": false
+      },
+      "F16": {
+        "value": false
+      },
+      "F17": {
+        "value": false
+      },
+      "F20": {
+        "value": false
+      },
+      "F21": {
+        "value": false
+      },
+      "F22": {
+        "value": false
+      },
+      "F101": {
+        "value": "Customer No."
+      },
+      "F100": {
+        "value": "Cust. Ledger Entry"
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMER"
+      },
+      "F2": {
+        "value": 0
+      },
+      "F3": {
+        "value": ""
+      },
+      "F10": {
+        "value": 36
+      },
+      "F11": {
+        "value": 2
+      },
+      "F12": {
+        "value": "%4"
+      },
+      "F14": {
+        "value": false
+      },
+      "F15": {
+        "value": false
+      },
+      "F16": {
+        "value": false
+      },
+      "F17": {
+        "value": false
+      },
+      "F20": {
+        "value": false
+      },
+      "F21": {
+        "value": false
+      },
+      "F22": {
+        "value": false
+      },
+      "F101": {
+        "value": "Sell-to Customer No."
+      },
+      "F100": {
+        "value": "Sales Header"
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMER"
+      },
+      "F2": {
+        "value": 0
+      },
+      "F3": {
+        "value": ""
+      },
+      "F10": {
+        "value": 167
+      },
+      "F11": {
+        "value": 5
+      },
+      "F12": {
+        "value": "%4"
+      },
+      "F14": {
+        "value": false
+      },
+      "F15": {
+        "value": false
+      },
+      "F16": {
+        "value": false
+      },
+      "F17": {
+        "value": false
+      },
+      "F20": {
+        "value": false
+      },
+      "F21": {
+        "value": false
+      },
+      "F22": {
+        "value": false
+      },
+      "F101": {
+        "value": "Bill-to Customer No."
+      },
+      "F100": {
+        "value": "Project"
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMER"
+      },
+      "F2": {
+        "value": 1
+      },
+      "F3": {
+        "value": ""
+      },
+      "F10": {
+        "value": 36
+      },
+      "F11": {
+        "value": 0
+      },
+      "F12": {
+        "value": ""
+      },
+      "F14": {
+        "value": false
+      },
+      "F15": {
+        "value": true
+      },
+      "F16": {
+        "value": false
+      },
+      "F17": {
+        "value": false
+      },
+      "F20": {
+        "value": false
+      },
+      "F21": {
+        "value": false
+      },
+      "F22": {
+        "value": false
+      },
+      "F101": {
+        "value": ""
+      },
+      "F100": {
+        "value": "Sales Header"
+      }
+    },
+    {
+      "F1": {
+        "value": "CUSTOMER"
+      },
+      "F2": {
+        "value": 1
+      },
+      "F3": {
+        "value": ""
+      },
+      "F10": {
+        "value": 37
+      },
+      "F11": {
+        "value": 0
+      },
+      "F12": {
+        "value": ""
+      },
+      "F14": {
+        "value": false
+      },
+      "F15": {
+        "value": true
+      },
+      "F16": {
+        "value": false
+      },
+      "F17": {
+        "value": false
+      },
+      "F20": {
+        "value": false
+      },
+      "F21": {
+        "value": false
+      },
+      "F22": {
+        "value": false
+      },
+      "F101": {
+        "value": ""
+      },
+      "F100": {
+        "value": "Sales Line"
+      }
+    },
+    {
+      "F1": {
+        "value": "VENDOR"
+      },
+      "F2": {
+        "value": 0
+      },
+      "F3": {
+        "value": ""
+      },
+      "F10": {
+        "value": 23
+      },
+      "F11": {
+        "value": 1
+      },
+      "F12": {
+        "value": "%4"
+      },
+      "F14": {
+        "value": false
+      },
+      "F15": {
+        "value": false
+      },
+      "F16": {
+        "value": false
+      },
+      "F17": {
+        "value": false
+      },
+      "F20": {
+        "value": false
+      },
+      "F21": {
+        "value": false
+      },
+      "F22": {
+        "value": false
+      },
+      "F101": {
+        "value": "No."
+      },
+      "F100": {
+        "value": "Vendor"
+      }
+    },
+    {
+      "F1": {
+        "value": "VENDOR"
+      },
+      "F2": {
+        "value": 0
+      },
+      "F3": {
+        "value": ""
+      },
+      "F10": {
+        "value": 25
+      },
+      "F11": {
+        "value": 3
+      },
+      "F12": {
+        "value": "%4"
+      },
+      "F14": {
+        "value": false
+      },
+      "F15": {
+        "value": false
+      },
+      "F16": {
+        "value": false
+      },
+      "F17": {
+        "value": false
+      },
+      "F20": {
+        "value": false
+      },
+      "F21": {
+        "value": false
+      },
+      "F22": {
+        "value": false
+      },
+      "F101": {
+        "value": "Vendor No."
+      },
+      "F100": {
+        "value": "Vendor Ledger Entry"
+      }
+    },
+    {
+      "F1": {
+        "value": "VENDOR"
+      },
+      "F2": {
+        "value": 0
+      },
+      "F3": {
+        "value": ""
+      },
+      "F10": {
+        "value": 38
+      },
+      "F11": {
+        "value": 2
+      },
+      "F12": {
+        "value": "%4"
+      },
+      "F14": {
+        "value": false
+      },
+      "F15": {
+        "value": false
+      },
+      "F16": {
+        "value": false
+      },
+      "F17": {
+        "value": false
+      },
+      "F20": {
+        "value": false
+      },
+      "F21": {
+        "value": false
+      },
+      "F22": {
+        "value": false
+      },
+      "F101": {
+        "value": "Buy-from Vendor No."
+      },
+      "F100": {
+        "value": "Purchase Header"
+      }
+    },
+    {
+      "F1": {
+        "value": "VENDOR"
+      },
+      "F2": {
+        "value": 0
+      },
+      "F3": {
+        "value": ""
+      },
+      "F10": {
+        "value": 288
+      },
+      "F11": {
+        "value": 1
+      },
+      "F12": {
+        "value": "%4"
+      },
+      "F14": {
+        "value": false
+      },
+      "F15": {
+        "value": false
+      },
+      "F16": {
+        "value": false
+      },
+      "F17": {
+        "value": false
+      },
+      "F20": {
+        "value": false
+      },
+      "F21": {
+        "value": false
+      },
+      "F22": {
+        "value": false
+      },
+      "F101": {
+        "value": "Vendor No."
+      },
+      "F100": {
+        "value": "Vendor Bank Account"
+      }
+    },
+    {
+      "F1": {
+        "value": "VENDOR"
+      },
+      "F2": {
+        "value": 1
+      },
+      "F3": {
+        "value": ""
+      },
+      "F10": {
+        "value": 288
+      },
+      "F11": {
+        "value": 0
+      },
+      "F12": {
+        "value": ""
+      },
+      "F14": {
+        "value": false
+      },
+      "F15": {
+        "value": true
+      },
+      "F16": {
+        "value": false
+      },
+      "F17": {
+        "value": false
+      },
+      "F20": {
+        "value": false
+      },
+      "F21": {
+        "value": false
+      },
+      "F22": {
+        "value": false
+      },
+      "F101": {
+        "value": ""
+      },
+      "F100": {
+        "value": "Vendor Bank Account"
+      }
+    }
+  ]
+}

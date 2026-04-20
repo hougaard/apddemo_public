@@ -1,0 +1,21 @@
+<html lang="en" data-theme="light">
+<head>
+  <?parse('header.html')?>
+  <title>Advanced Portal Designer - Payment</title>
+  <script src="https://js.stripe.com/basil/stripe.js"></script>
+</head>
+<body>
+    <?parse('navbar.html')?>
+    <div class="columns mt-4">
+        <div class="column is-one-fifth"></div>
+        <div class="column is-three-fifth">
+            <h1 class="title">Pay Invoice with credit card: <?parm('invoice')?></h1>
+            <p class="is-size-6">Use this button to pay invoice <?parm(invoice)?> with a credit card. You'll be taken to a payment page.</p>
+            <h1 class="is-size-4">Total <?parm('currency')?> <?parm('amount')?></h1>
+            <a href="<?stripelink(parm('currency'),parm('amount'),parm('invoice'),'PAY.4&',parm('invoice'))?>" class="button is-success mt-3">Pay Invoice</a>
+       </div>
+      <div class="column is-one-fifth"></div>
+    </div>
+    <?parse('footer.html')?>
+</body>
+</html>

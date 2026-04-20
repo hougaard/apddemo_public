@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <?parse('header.html')?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Component List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css">
+</head>
+<body>
+    <?parse('navbar.html')?>
+    <?open(Item)?>
+    <?filter(Item,"No.",parm('27:1'))?>
+    <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="<?action('itemcard',Item)?>"><?field(Item,Description)?></a></li>
+        <li class="is-active"><a href="#">BOM for <?field(Item,Description)?></a></li>
+      </ul>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">BOM Component List for <?field(Item,Description)?></h1>
+            <table class="table is-striped is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>No.</th>
+                        <th>Description</th>
+                        <th>Quantity per</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?open("BOM Component")?>
+                    <?filter("BOM Component","Parent Item No.",parm('27:1'))?>
+                    <?loop("BOM Component",'-')?>
+                    <tr>
+                        <td><?field("BOM Component","Type")?></td>
+                        <?if("BOM Component","Type",'=',1)?>
+                            <td><a href="<?action('itemcard')?>&27:1=<?field("BOM Component","No.")?>"><?field("BOM Component","No.")?></a></td>
+                        <?else?>
+                            <td><?field("BOM Component","No.")?></td>
+                        <?endif?>
+                        <td><?field("BOM Component","Description")?></td>
+                        <td><?field("BOM Component","Quantity per")?></td>
+                    </tr>
+                    <?loopend("BOM Component",1,20)?>
+                    <?close("BOM Component")?>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <?parse('footer.html')?>
+</body>
+</html>

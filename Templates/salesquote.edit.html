@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <?parse('header.html')?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Quote</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+      integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
+      integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+</head>
+<body>
+    <?parse('navbar.html')?>
+    <?open("Sales Header")?>
+    <?filter("Sales Header","Document Type",0)?>
+    <?filter("Sales Header","No.",parm('36:3'))?>
+    <?loop("Sales Header",'-')?><?loopend("Sales Header",1,1)?>
+    <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="<?action('salesquotes')?>">Sales Quotes</a></li>
+        <li class="is-active"><a href="#">Edit</a></li>
+      </ul>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <div class="card">
+               <div class="card-content">
+                    <div class="content">
+                        <form id="headerform">
+                          <?hidden("Sales Header","No.")?>
+                          <?hidden("Sales Header","Document Type")?>
+                          <table class="table is-fullwidth">
+                            <tbody>
+                                <tr>
+                                    <td class="title is-info" colspan="2">Sales Quote <?field("Sales Header", "No.")?></td>
+                                </tr>
+                                <tr>
+                                    <td>Ship-to Name</td>
+                                    <td>
+                                        <?field("Sales Header", "Ship-to Name")?><br/>
+                                        <?field("Sales Header", "Ship-to Address")?><br/>
+                                        <?field("Sales Header", "Ship-to City")?> <?field("Sales Header", "Ship-to Post Code")?> <?field("Sales Header", "Ship-to County")?><br/>
+                                        <?field("Sales Header", "Ship-to Country/Region Code")?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Your Reference</td>
+                                    <td><?edit("Sales Header", "Your Reference",'class="field input has-text-left"')?></td>
+                                </tr>
+                                <tr>
+                                    <td>Requested Delivery Date</td>
+                                    <td><?edit("Sales Header", "Requested Delivery Date",'class="field input has-text-right"')?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </form>
+                        <?open("Sales Line")?>
+                        <?filter("Sales Line","Document No.",field(36,3))?>
+                        <table class="table is-striped is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>No.</th>
+                                    <th>Description</th>
+                                    <th class="has-text-right">Quantity</th>
+                                    <th class="has-text-right">Unit Price</th>
+                                    <th class="has-text-right">Line Discount %</th>
+                                    <th class="has-text-right">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?loop("Sales Line",'-')?>
+                                <form>
+                                    <tr>
+                                        <td>
+                                            <?hidden("Sales Line","Document Type")?>
+                                            <?hidden("Sales Line","Document No.")?>
+                                            <?hidden("Sales Line","Line No.")?>
+                                            <?field("Sales Line","Type")?>
+                                        </td>
+                                        <td><?field("Sales Line","No.")?></td>
+                                        <td><?field("Sales Line","Description")?></td>
+                                        <td class="has-text-right"><?edit("Sales Line","Quantity",'class="field input has-text-right"')?></td>
+                                        <td class="has-text-right"><?edit("Sales Line","Unit Price",'class="field input has-text-right"')?></td>
+                                        <td class="has-text-right"><?show("Sales Line","Line Discount %",'class="field input has-text-right"')?></td>
+                                        <td class="has-text-right"><?show("Sales Line","Amount",'class="field input has-text-right"')?></td>
+                                    </tr>
+                                </form>
+                                <?loopend("Sales Line",1,20)?>
+                            </tbody>
+                        </table>
+                        <?close("Sales Line")?>
+                    </div>
+                </div>
+                <div>
+                    <div class="card-content">
+                        <div class="content">
+                            <form method="post" action="<?action('salesquote.add')?>">
+                                <table class="table  is-fullwidth">
+                                    <thead>
+                                        <tr>
+                                            <th>Add Item</th>
+                                            <th class="has-text-right">Quantity</th>
+                                            <th class="has-text-right">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                       <?hidden("sales header","No.")?>
+                                        <tr>
+                                            <td>
+                                                <select id="item" name="item" style="width: 700px;"></select>
+                                                <script>
+                                                    $('#item').selectize({
+                                                        valueField: 'no',
+                                                        labelField: 'description',
+                                                        searchField: 'description',
+                                                        options: [],
+                                                        create: function(query, callback) {
+                                                            if (!query.length) return callback();
+                                                            $.get('<?action('ITEM.SEARCH')?>&search=' + query, function( data ) {
+                                                                callback(data.results);
+                                                    		});
+                                                        },
+                                                        load: function(query, callback) {
+                                                            if (!query.length) return callback();
+                                                            $.get('<?action('ITEM.SEARCH')?>&search=' + query, function( data ) {
+                                                                callback(data.results);
+                                                    		});
+                                                        }
+                                                    });
+                                                </script>
+                                            </td>
+                                            <td class="has-text-right">
+                                                <input type="text" id="qty" name="qty" value="1" class="field input has-text-right">
+                                            </td>
+                                            <td class="has-text-right">
+                                                <input type="submit" class="button is-info" value="Add">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                            <table class="table  is-fullwidth">
+                                <tbody>
+                                    <tr>
+                                        <td class="has-text-right">
+                                            <button onclick="window.location.href='?action=SALESQUOTE.PRINT&36:3=<?field(36,3)?>'" class="button is-success">Print</button>
+                                            <button onclick="window.location.href='?action=SALESQUOTE.ORDER&36:3=<?field(36,3)?>'" class="button is-success">Order This Quote</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <form id="headertotal">
+                          <?hidden("Sales Header","No.")?>
+                          <?hidden("Sales Header","Document Type")?>
+                          <table class="table is-fullwidth">
+                            <tbody>
+                                <tr>
+                                    <td>Amount</td>
+                                    <td class="has-text-right"><?show("Sales Header", "Amount",'class="field input has-text-right has-text-weight-bold" style="width:200px;"')?></td>
+                                </tr>
+                                <tr>
+                                    <td>Amount Including VAT</td>
+                                    <td class="has-text-right"><?show("Sales Header", "Amount Including VAT",'class="field input has-text-right has-text-weight-bold" style="width:200px;"')?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </form>
+                        <?close("Sales Header")?>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
+    <script>
+        function Extra(triggerform)
+        {
+            if (triggerform != document.getElementById("headerform"))
+                APD_Refresh(36,document.getElementById("headerform"));
+            if (triggerform != document.getElementById("headertotal"))
+                APD_Refresh(36,document.getElementById("headertotal"));
+        }
+        ExtraValidateFunction = Extra;
+    </script>
+    <?parse('footer.html')?>
+</body>
+</html>

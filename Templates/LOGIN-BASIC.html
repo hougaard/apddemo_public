@@ -1,0 +1,110 @@
+<html lang="en" data-theme="light">
+<?logout?>
+<head>
+  <?parse('header.html')?>
+  <title>Advanced Portal Designer Demo Site</title>
+</head>
+<body>
+    <nav class="navbar is-white has-shadow">
+        <!-- logo / brand -->
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/demo">
+            <img src="<?action('logo')?>&79:1=" style="max-height: 70px" class="py-2 px-2">
+          </a>
+           <a class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </nav>
+    <style>
+        a.dark-hover {
+            background-color: #2F333C;
+        }
+    </style>
+    <section class="section mt-6 pb-0">
+        <div class="container mt-6">
+            <div class="columns is-centered mt-6">
+                <div class="column is-5 mt-1 mr-4 mb-2">
+                    <div class="card">
+                        <header class="card-header has-background-success">
+                            <p class="card-header-title has-text-white mt-3 mr-3 mb-3 is-size-5">Login</p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <form>
+                                    <div class="form">
+                                        <label class="label">User Name</label>
+                                        <div class="control">
+                                            <input class="input has-background-white" type="text" placeholder="User Name" id="username" name="username">
+                                        </div>
+                                        <br>
+                                        <label class="label">Password</label>
+                                        <div class="control">
+                                            <input class="input has-background-white" type="password" placeholder="Password" id="password" name="password">
+                                        </div>
+                                        <br>
+                                        <button id="button" class="button is-success is-light" onclick="TryLogin();">LOGIN</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column is-4 mt-1 mb-6 ml-4-mobile mr-4">
+                    <div class="card">
+                        <header class="card-header has-background-primary">
+                            <p class="card-header-title has-text-white mt-3 mr-3 mb-3 is-size-5">Information</p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                 <p class="mt-3">This portal is a demonstration of what you can build with the Advanced Portal Designer
+                                app for Microsoft Dynamics 365 Business Central. Read more about the Designer
+                                <a href="https://www.hougaard.com/portaldesigner" target="_blank">here</a>.</p>
+                                <p class="mt-3">If you what to try out the portal, please create an user in Business Central.</p>
+                                <p>This website is hosted on Azure with a free (F1) app service plan. The website connects to a Business Central production environment, everything hosted in Canada Central Azure data center.</p>
+                                <p class="mt-3">All the data you'll find here are from the CRONUS company.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+      function TryLogin()
+      {
+        document.body.style.cursor = 'wait';
+        var button = document.getElementById('button');
+        button.disabled = true;
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        const Http = new XMLHttpRequest();
+        Http.open("POST", '/demo/?action=login-check&username='+username+'&password='+password+'&ajax=true');
+        Http.send();
+
+        Http.onreadystatechange = (e) => {
+          if (Http.readyState == 4 && Http.status==200)
+          {
+            document.body.style.cursor = 'default';
+            if (Http.responseText == 'OK!')
+            {
+              if (window.location.href.toLowerCase().search('action=login') > -1)
+                window.location.href = '/demo/';
+              else
+                location.reload();
+            }
+            else
+            {
+              alert('Login to APD Demo failed, please try again!');
+              button.disabled = false;
+            }
+          }
+        }
+      }
+    </script>
+</body>
+</html>

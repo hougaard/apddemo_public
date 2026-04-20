@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Location List</h1>
+            <table class="table is-striped is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>E-Mail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?open(Location)?>
+                    <?loop(Location,'-')?>
+                    <tr>
+                        <td><?field(Location,Code)?></td>
+                        <td><?field(Location,Name)?></td>
+                        <td><?field(Location,Address)?></td>
+                        <td><?field(Location,City)?></td>
+                        <td><?field(Location,"E-Mail")?></td>
+                    </tr>
+                    <?loopend(Location,1,20)?>
+                    <?close(Location)?>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>

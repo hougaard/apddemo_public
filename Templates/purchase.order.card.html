@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <?parse('header.html')?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css">
+</head>
+<body>
+    <?parse('navbar.html')?>
+    <?open("Purchase Header")?>
+    <?filter("Purchase Header","Document Type",1)?>
+    <?filter("Purchase Header","No.",parm('38:3'))?>
+    <?loop("Purchase Header",'-')?><?loopend("Purchase Header",1,1)?>
+    <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="<?action('Purchaseorders')?>">Purchase Orders</a></li>
+        <li class="is-active"><a href="#"><?field("Purchase Header","No.")?></a></li>
+      </ul>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <div class="card">
+               <div class="card-content">
+                    <div class="content">
+                        <table class="table is-fullwidth">
+                            <tbody>
+                                <tr>
+                                    <td class="title is-info" colspan="2">Purchase Order <?field("Purchase Header", "No.")?>
+                                        <a class="button ml-3 is-warning" href="<?action('PURCHASEORDERREPORT')?>&orderno=<?field("Purchase Header","No.")?>">Print</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ship-to Name</td>
+                                    <td>
+                                        <?field("Purchase Header", "Ship-to Name")?><br/>
+                                        <?field("Purchase Header", "Ship-to Address")?><br/>
+                                        <?field("Purchase Header", "Ship-to City")?> <?field("Purchase Header", "Ship-to Post Code")?> <?field("Purchase Header", "Ship-to County")?><br/>
+                                        <?field("Purchase Header", "Ship-to Country/Region Code")?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Your Reference</td>
+                                    <td><?field("Purchase Header", "Your Reference")?></td>
+                                </tr>
+                                <tr>
+                                    <td>Order Date</td>
+                                    <td><?field("Purchase Header", "Order Date")?></td>
+                                </tr>
+                                <tr>
+                                    <td>Posting Date</td>
+                                    <td><?field("Purchase Header", "Posting Date")?></td>
+                                </tr>
+                                <tr>
+                                    <td>Expected Receipt Date</td>
+                                    <td><?field("Purchase Header", "Expected Receipt Date")?></td>
+                                </tr>
+                                <tr>
+                                    <td>Due Date</td>
+                                    <td><?field("Purchase Header", "Due Date")?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <?open("Purchase Line")?>
+                        <?filter("Purchase Line","Document No.",field("Purchase Header","No."))?>
+                        <table class="table is-striped is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>No.</th>
+                                    <th>Description</th>
+                                    <th class="has-text-right">Quantity</th>
+                                    <th class="has-text-right">Unit Cost</th>
+                                    <th class="has-text-right">Line Discount %</th>
+                                    <th class="has-text-right">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?loop("Purchase Line",'-')?>
+                                <tr>
+                                    <td><?field("Purchase Line","Type")?></td>
+                                    <td><?field("Purchase Line","No.")?></td>
+                                    <td><?field("Purchase Line","Description")?></td>
+                                    <td class="has-text-right"><?field("Purchase Line","Quantity")?></td>
+                                    <td class="has-text-right"><?field("Purchase Line","Unit Cost")?></td>
+                                    <td class="has-text-right"><?field("Purchase Line","Line Discount %")?></td>
+                                    <td class="has-text-right"><?field("Purchase Line","Amount")?></td>
+                                </tr>
+                                <?loopend("Purchase Line",1,20)?>
+                            </tbody>
+                        </table>
+                        <?close("Purchase Line")?>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                          <table class="table is-fullwidth">
+                            <tbody>
+                                <tr>
+                                    <td>Amount</td>
+                                    <td class="has-text-right"><?field("Purchase Header", "Amount")?></td>
+                                </tr>
+                                <tr>
+                                    <td>Amount Including VAT</td>
+                                    <td class="has-text-right"><?field("Purchase Header", "Amount Including VAT")?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="box mt-5">
+                        <table>
+                            <tr>
+                            <td class="pt-3">
+                            <?open("Document Attachment")?>
+                            <?filter("document attachment","Table ID",'38')?>
+                            <?filter("document attachment","No.",field(38,3))?>
+                            <table class="table">
+                                <thead>
+                                    <th>Attachments</th>
+                                    <th>Uploaded</th>
+                                </thead>          
+                                <tbody>
+                                <?loop("document attachment",'-')?>
+                                    <tr>
+                                        <td><?field("document attachment","File Name")?>.<?field("document attachment","File Extension")?></td>
+                                        <td><?field("document attachment","Attached Date")?></td>
+                                    </tr>
+                                <?loopend("document attachment",1,100)?>
+                            <?close("document attachment")?>
+                            </tbody>
+                            </table>
+                            </td>
+                            <td class="pt-3" style="padding-left: 30px;">
+                            <form action="<?action('ATTACHMENT.UPLOAD',"purchase header")?>" enctype="multipart/form-data" method="post">
+                                <input class="input is-size-6 mt-4" type="file" name="filename" size="100" style="width: 250px;">         
+                                <br>
+                                <button class="button is-primary mt-3" type="submit" value="Upload">Upload</button>
+                             </form> 
+                             </td>
+                             </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?parse('footer.html')?>
+    <?close("Purchase Header")?>
+    </body>
+</html>

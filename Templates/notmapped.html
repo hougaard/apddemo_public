@@ -1,0 +1,30 @@
+<html lang="en" data-theme="light">
+<head>
+  <?parse('header.html')?>
+  <title>Advanced Portal Designer - Select who you are</title>
+</head>
+<body>
+    <div class="columns mt-4">
+        <div class="column is-one-fifth"></div>
+        <div class="column">
+            To access the Advanced Portal Designer demo portal, you need can use any of these codes:
+            <?open("Customer")?>
+            <?loop("Customer",'-')?>
+            <p><strong>c<?field("Customer","No.")?></strong> for becoming customer <?field("Customer",Name)?></p>
+            <?loopend("Customer",1,10)?>
+            <?open("Vendor")?>
+            <?loop("Vendor",'-')?>
+            <p><strong>v<?field("Vendor","No.")?></strong> for becoming vendor <?field("Vendor",Name)?></p>
+            <?loopend("Vendor",1,10)?>
+            <form method="POST" action="<?action('NOTMAPPED.CODE')?>">
+                <input name="invitationcode" placeholder="Invitation Code" type="text" class="input">
+                <div class="mt-5">
+                    <button type="submit" class="button is-success">Validate Code</button>
+                </div>
+            </form>
+        </div>
+        <div class="column is-one-fifth"></div>
+    </div>
+    <?parse('footer.html')?>
+</body>
+</html>

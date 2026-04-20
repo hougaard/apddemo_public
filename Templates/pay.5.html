@@ -1,0 +1,18 @@
+<html lang="en" data-theme="light">
+<head>
+  <?parse('header.html')?>
+  <title>Advanced Portal Designer - Payment</title>
+</head>
+<body>
+    <?parse('navbar.html')?>
+    <div class="columns mt-4">
+        <div class="column is-one-fifth"></div>
+        <div class="column is-three-fifth">
+            <h1 class="title">Invoice Payment Complete - Thank you.</h1>
+            <h3><a href="<?action('pay.receipt')?>&doc=<?parm('doc')?>">Download Receipt</a></h3>
+       </div>
+      <div class="column is-one-fifth"></div>
+    </div>
+    <?parse('footer.html')?>
+</body>
+</html>

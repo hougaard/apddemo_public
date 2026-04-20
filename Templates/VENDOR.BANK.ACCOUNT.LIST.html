@@ -1,0 +1,57 @@
+<html lang="en" data-theme="light">
+<head>
+  <?parse('header.html')?>
+  <title>Advanced Portal Designer - Vendor Bank Accounts</title>
+</head>
+<body>
+    <?parse('navbar.html')?>
+    <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="<?action('VENDOR.BANK.ACCOUNT.LIST')?>">Bank Accounts</a></li>
+      </ul>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <?open(Vendor)?>
+            <h1 class="title"><?field(Vendor,Name)?> Bank Account List</h1>
+            <h2 class="subtitle mt-3 level-item level-left">Add new
+            <?open(Currency)?>
+            <?loop(currency,'-')?>
+                <?open("Vendor Bank Account")?>
+                <?filter("vendor bank account",Code,field(currency,code))?>
+                <?if(288,'EMPTY','=','true')?>
+                    <a class="button ml-3 is-success" href="<?action('VENDOR.BANK.ACCOUNT.NEW',currency)?>"><?field(currency,Code)?></a>
+                <?endif?>
+                <?close("vendor bank account")?>
+            <?loopend(currency,1,10)?>      
+            </h2>
+            <table class="table is-striped is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Bank Branch No.</th>
+                        <th>Currency Code</th>
+                        <th>SWIFT Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?open("Vendor Bank Account")?>
+                    <?loop("Vendor Bank Account",'-')?>
+                    <tr>
+                        <td><a href="<?action('VENDOR.BANK.ACCOUNT.EDIT',"vendor bank account")?>"><?field("Vendor Bank Account","Code")?></a></td>
+                        <td><?field("Vendor Bank Account","Name")?></td>
+                        <td><?field("Vendor Bank Account","Bank Branch No.")?></td>
+                        <td><?field("Vendor Bank Account","Currency Code")?></td>
+                        <td><?field("Vendor Bank Account","SWIFT Code")?></td>
+                    </tr>
+                    <?loopend("Vendor Bank Account",1,20)?>
+                    <?close("Vendor Bank Account")?>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <?parse('footer.html')?>
+</body>
+</html>

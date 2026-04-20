@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <?parse('header.html')?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Order List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css">
+</head>
+<body>
+    <?parse('navbar.html')?>
+     <nav class="breadcrumb ml-5" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li class="is-active"><a href="#">Purchase Orders</a></li>
+      </ul>
+    </nav>
+    <section class="section is-fullwidth">
+        <div class="container is-fullwidth">
+            <h1 class="title">Purchase Order List</h1>
+            <table class="table is-striped is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Your Reference</th>
+                        <th>Ship-to Name</th>
+                        <th>Ship-to Address</th>
+                        <th>Ship-to City</th>
+                        <th>Order Date</th>
+                        <th>Expected Receipt Date</th>
+                        <th>Payment Terms Code</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?open("Purchase Header")?>
+                    <?filter("Purchase Header","Document Type",1)?>
+                    <?loop("Purchase Header",'-')?>
+                    <tr>
+                        <td><a href="<?action('Purchaseorder',"purchase header")?>"><?field("Purchase Header","No.")?></a></td>
+                        <td><?field("Purchase Header","Your Reference")?></td>
+                        <td><?field("Purchase Header","Ship-to Name")?></td>
+                        <td><?field("Purchase Header","Ship-to Address")?></td>
+                        <td><?field("Purchase Header","Ship-to City")?></td>
+                        <td><?field("Purchase Header","Order Date")?></td>
+                        <td><?field("Purchase Header","Expected Receipt Date")?></td>
+                        <td><?field("Purchase Header","Payment Terms Code")?></td>
+                        <td><?field("Purchase Header","Due Date")?></td>
+                    </tr>
+                    <?loopend("Purchase Header",1,20)?>
+                    <?close("Purchase Header")?>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <?parse('footer.html')?>
+</body>
+</html>
